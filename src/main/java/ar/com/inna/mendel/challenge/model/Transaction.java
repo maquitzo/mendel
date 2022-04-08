@@ -1,23 +1,23 @@
 package ar.com.inna.mendel.challenge.model;
 
 public class Transaction {
-    private String id;
+    private Long id;
     private Long parent_id;
     private Double amount;
     private String type;
 
-    public Transaction(String id, Long parent_id, Double amount, String type) {
+    public Transaction(Long id, Long parent_id, Double amount, String type) {
         this.setId(id);
         this.setParent_id(parent_id);
         this.setAmount(amount);
         this.setType(type);
     }
 
-    public String getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Long id) {
         this.id = id;
     }
 

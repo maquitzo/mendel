@@ -1,7 +1,6 @@
 package ar.com.inna.mendel.challenge.controller;
 
 import ar.com.inna.mendel.challenge.dto.TransactionDto;
-import ar.com.inna.mendel.challenge.model.Transaction;
 import ar.com.inna.mendel.challenge.service.ITransactionService;
 import net.minidev.json.JSONObject;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,7 +8,6 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -23,7 +21,7 @@ public class TransactionController {
     }
 
     @PutMapping("/{transaction_id}")
-    public void putTransaction(@PathVariable String transaction_id, @RequestBody TransactionDto transaction) {
+    public void putTransaction(@PathVariable Long transaction_id, @RequestBody TransactionDto transaction) {
 
         this.transactionService.save(
                 transaction.type,
