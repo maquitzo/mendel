@@ -33,7 +33,7 @@ public class TransactionRepository implements ITransactionRepository {
 
         return transactionList
                 .stream()
-                .filter(t -> t.getId().equals(transactionId.toString()))
+                .filter(t -> t.getId().equals(transactionId))
                 .findFirst();
     }
 

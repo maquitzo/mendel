@@ -16,8 +16,8 @@ public class TransactionService implements ITransactionService {
     @Autowired
     private ITransactionRepository iTransactionRepository;
 
-    public void save(String type,Double amount, Long parent_id, Long transaction_id) {
-        iTransactionRepository.save(new Transaction(transaction_id,parent_id,amount,type));
+    public Transaction save(String type, Double amount, Long parent_id, Long transaction_id) {
+        return iTransactionRepository.save(new Transaction(transaction_id,parent_id,amount,type));
     }
 
     public List<String> listByType(String type){
