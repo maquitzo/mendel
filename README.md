@@ -1,10 +1,10 @@
 
-## Medel
+## Mendel
 ### Java Code Challenge
 
-####Building
+#### Building
 `docker build -t medel/challenge . `
-####Running
+#### Running
 `docker run -d -p 1234:8080 medel/challenge`
-####Stop
+#### Stop
 `docker stop {containerId}`
